@@ -10,5 +10,9 @@
         credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
       };
     };
+    gh = {
+      enable = true;
+      gitCredentialHelper.enable = true;
+    };
   };
 }

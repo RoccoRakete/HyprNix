@@ -2,12 +2,11 @@
 
 {
   environment.systemPackages = with pkgs; [
-    avizo
-    nixpkgs-fmt
-    nixfmt-rfc-style
-    mate.mate-polkit
-    nerdfetch
-    swaynotificationcenter
+    #Flake inputs
+    inputs.eza.packages.${system}.default
+    inputs.nh.packages.${system}.default
+
+    #Gnome
     gnome.gvfs
     gnome.gnome-control-center
     nautilus
@@ -15,48 +14,41 @@
     gnome-calendar
     gnome-calculator
     gnome-disk-utility
-    seahorse
-    imagemagick
-    nwg-look
-    clipse
-    hyprpicker
-    gradience
-    stylua
-    codespell
-    black
-    prettierd
-    shfmt
-    lua-language-server
-    dart-sass
-    sassc
-    neovide
-    fzf
-    python3
-    cargo
-    ripgrep
-    fd
-    jq
-    nil
-    rustfmt
-    jsonfmt
-    luaformatter
-    pkg-config
-    uncrustify
-    rpi-imager
-    super-slicer-beta
+
+    #Game
     lutris
+
+    #Office
     thunderbird
     libreoffice-fresh
     nextcloud-client
     mailspring
     localsend
+    gimp
+
+    #FPV
+    betaflight-configurator
+
+    #HomeLab
+    rpi-imager
+    super-slicer-beta
+
+    #Media
+    spotify
+    gthumb
+    playerctl
+
+    #System
+    nerdfetch
+    swaynotificationcenter
+    mission-center
+    seahorse
+    avizo
+    imagemagick
+    nwg-look
+    clipse
     wf-recorder
     grimblast
-    wayshot
-    spotify
-    gimp
-    gthumb
-    inputs.eza.packages.${system}.default
     pika-backup
     polkit
     wget
@@ -78,13 +70,41 @@
     intel-gpu-tools
     usbutils
     btop
-    playerctl
+    wayshot
     unzip
     wev
     sabnzbd
     wlr-randr
     powertop
     poweralertd
-    inputs.nh.packages.${system}.default
+
+    #Styling
+    hyprpicker
+    gradience
+
+    #Code
+    stylua
+    codespell
+    black
+    prettierd
+    shfmt
+    lua-language-server
+    dart-sass
+    sassc
+    neovide
+    fzf
+    python3
+    cargo
+    ripgrep
+    fd
+    jq
+    nil
+    rustfmt
+    jsonfmt
+    luaformatter
+    pkg-config
+    uncrustify
+    nixpkgs-fmt
+    nixfmt-rfc-style
   ];
 }

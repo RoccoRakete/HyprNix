@@ -4,6 +4,7 @@
   # Bootloader.
   boot = {
     initrd.systemd.enable = true;
+    plymouth.enable = true;
     tmp.cleanOnBoot = true;
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
@@ -11,10 +12,29 @@
       "nosgx"
     ];
     loader = {
+      timeout = 0;
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
   };
+
+  systemd = {
+    user.services.polkit-gnome-authentication-agent-1 = {
+      description = "polkit-gnome-authentication-agent-1";
+      wantedBy = [ "graphical-session.target" ];
+      wants = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "always";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
+      };
+    };
+  };
+
+  security.polkit.enable = true;
 
   hardware = {
     graphics.extraPackages = with pkgs; [
