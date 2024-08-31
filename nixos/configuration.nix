@@ -11,6 +11,7 @@
     ./bluetooth.nix
     ./env.nix
     ./fonts.nix
+    #/etc/nixos/hardware-configuration.nix
     ./hardware-configuration.nix
     ./hyprland.nix
     ./networking.nix

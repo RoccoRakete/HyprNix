@@ -19,7 +19,6 @@
         ];
       };
       initExtra = ''
-        source ~/.p10k.zsh
         nerdfetch
         export TERM=xterm
         export EDITOR=nvim
@@ -29,10 +28,10 @@
         ll = "eza -loah --icons=always --no-permissions --git";
         v = "nvim";
 
-        editd = "nvim ~/.dots";
+        editd = "nvim ~/.dots/nixos";
 
-        pushd = "cd ~/.dots && git add -A && git commit && git push --repo https://github.com/RoccoRakete/hyprland-dots.git && cd ~";
-        add = "cd ~/.dots && git add -A && cd ~";
+        pushd = "cd ~/.dots/nixos && git add -A && git commit && git push --repo https://github.com/RoccoRakete/HyprNix.git && cd ~";
+        add = "cd ~/.dots/nixos && git add -A && cd ~";
 
         update = "sudo nixos-rebuild switch";
         flake-update = "nix flake update ~/.dots/nixos";
