@@ -7,6 +7,7 @@
     inputs.nh.packages.${system}.default
 
     #Gnome
+    baobab
     gnome.gvfs
     gnome.gnome-control-center
     nautilus
