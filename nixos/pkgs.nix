@@ -20,6 +20,7 @@
     lutris
 
     #Office
+    ungoogled-chromium
     thunderbird
     libreoffice-fresh
     nextcloud-client
@@ -33,6 +34,7 @@
     #HomeLab
     rpi-imager
     super-slicer-beta
+    ventoy
 
     #Media
     spotify

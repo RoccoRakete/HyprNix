@@ -9,6 +9,7 @@
       tailwindcss.enable = true;
       pyright.enable = true;
       nixd.enable = true;
+      bashls.enable = true;
     };
     keymaps = {
       lspBuf = {

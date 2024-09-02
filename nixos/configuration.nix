@@ -11,7 +11,6 @@
     ./bluetooth.nix
     ./env.nix
     ./fonts.nix
-    #/etc/nixos/hardware-configuration.nix
     ./hardware-configuration.nix
     ./hyprland.nix
     ./networking.nix
@@ -48,13 +47,12 @@
     in
     {
       settings = {
-        # Enable flakes and new 'nix' command
         experimental-features = "nix-command flakes";
-        # Opinionated: disable global registry
         flake-registry = "";
         # Workaround for https://github.com/NixOS/nix/issues/9574
         nix-path = config.nix.nixPath;
         builders-use-substitutes = true;
+        auto-optimise-store = true;
         substituters = [
           "https://hyprland.cachix.org"
           "https://anyrun.cachix.org"
@@ -63,9 +61,14 @@
           "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
           "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
         ];
-        auto-optimise-store = true;
       };
-      # Opinionated: disable channels
+      optimise.automatic = true;
+
+      gc = {
+        automatic = true;
+        dates = "daily";
+        options = "--delete-older-than 7d";
+      };
       channel.enable = false;
 
       # Opinionated: make flake registry and nix path match flake inputs
