@@ -22,15 +22,15 @@ timeout="5000"
 case "$current_profile" in
 "power-saver")
     powerprofilesctl set balanced
-    notify-send -t $timeout --app-name=$app_name"  $header" "  $msg_prefix<span foreground='$blue'>\n  $current_profile</span>"
+    notify-send -t $timeout --app-name=$app_name "  $header" "  $msg_prefix<span foreground='$blue'>\n  $(powerprofilesctl get)</span>"
     ;;
 "balanced")
     powerprofilesctl set performance
-    notify-send -t $timeout --app-name=$app_name "  $header" "  $msg_prefix<span foreground='$red'>\n  $current_profile</span>"
+    notify-send -t $timeout --app-name=$app_name "  $header" "  $msg_prefix<span foreground='$red'>\n  $(powerprofilesctl get)</span>"
     ;;
 "performance")
     powerprofilesctl set power-saver
-    notify-send -t $timeout --app-name=$app_name "  $header" "  $msg_prefix<span foreground='$green'>\n  $current_profile</span>"
+    notify-send -t $timeout --app-name=$app_name "  $header" "  $msg_prefix<span foreground='$green'>\n  $(powerprofilesctl get)</span>"
     ;;
 *)
     echo "Unknown Profile: $current_profile"

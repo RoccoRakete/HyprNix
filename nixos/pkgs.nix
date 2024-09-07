@@ -9,7 +9,7 @@
     #Gnome
     baobab
     gnome.gvfs
-    gnome.gnome-control-center
+    gnome-control-center
     nautilus
     eog
     gnome-calendar
@@ -27,6 +27,7 @@
     mailspring
     localsend
     gimp
+    whatsapp-for-linux
 
     #FPV
     betaflight-configurator
@@ -42,6 +43,7 @@
     playerctl
 
     #System
+    sway-audio-idle-inhibit
     nerdfetch
     swaynotificationcenter
     mission-center

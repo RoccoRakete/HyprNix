@@ -27,6 +27,7 @@
             "https://addons.mozilla.org/firefox/downloads/file/4340992/bitwarden_password_manager-2024.8.0.xpi"
             "https://addons.mozilla.org/firefox/downloads/file/4216095/istilldontcareaboutcookies-1.1.4.xpi"
             "https://addons.mozilla.org/firefox/downloads/file/4325319/enhancer_for_youtube-2.0.126.xpi"
+            "https://addons.mozilla.org/firefox/downloads/file/4308094/sponsorblock-5.7.xpi"
           ];
         };
         ExtensionUpdate = true;
