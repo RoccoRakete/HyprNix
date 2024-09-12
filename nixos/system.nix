@@ -52,7 +52,10 @@
     power-profiles-daemon.enable = true;
     logind = {
       lidSwitchDocked = "ignore";
-      #lidSwitch = "ignore";
+      lidSwitch = "ignore";
+    };
+    upower = {
+      ignoreLid = true;
     };
     udev.extraRules = ''
       # DFU (Internal bootloader for STM32 and AT32 MCUs)
@@ -66,6 +69,16 @@
       gnome-keyring.enable = true;
     };
   };
+
+  # Enable the GNOME Desktop Environment.
+  services.xserver = {
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = false;
+  };
+
+  # Enable Cosmic
+  services.desktopManager.cosmic.enable = true;
+
   programs = {
     gnome-disks.enable = true;
   };

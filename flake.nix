@@ -38,6 +38,11 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     eza = {
       url = "github:eza-community/eza";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,6 +58,8 @@
       self,
       nixpkgs,
       home-manager,
+      nixvim,
+      nixos-cosmic,
       ...
     }@inputs:
     let
@@ -68,8 +75,15 @@
           };
           # > Our main nixos configuration file <
           modules = [
+            {
+              nix.settings = {
+                substituters = [ "https://cosmic.cachix.org/" ];
+                trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+              };
+            }
             ./nixos/configuration.nix
-            inputs.nixvim.nixosModules.nixvim
+            nixvim.nixosModules.nixvim
+            nixos-cosmic.nixosModules.default
           ];
         };
       };
