@@ -77,7 +77,7 @@
   };
 
   # Enable Cosmic
-  services.desktopManager.cosmic.enable = true;
+  # services.desktopManager.cosmic.enable = true;
 
   programs = {
     gnome-disks.enable = true;

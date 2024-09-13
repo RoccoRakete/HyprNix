@@ -10,6 +10,8 @@
       pyright.enable = true;
       nixd.enable = true;
       bashls.enable = true;
+      jsonls.enable = true;
+      yamlls.enable = true;
     };
     keymaps = {
       lspBuf = {
@@ -23,6 +25,16 @@
         "<leader>j" = "goto_next";
         "<leader>k" = "goto_prev";
       };
+    };
+  };
+  programs.nixvim.plugins.lspkind = {
+    enable = true;
+    symbolMap = {
+      Copilot = " ";
+    };
+    extraOptions = {
+      maxwidth = 50;
+      ellipsis_char = "...";
     };
   };
 }

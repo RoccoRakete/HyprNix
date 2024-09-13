@@ -6,11 +6,17 @@
     ./plugins/bufferline.nix
     ./plugins/cmp.nix
     ./plugins/conform.nix
-    ./plugins/dashboard.nix
+    ./plugins/illuminate.nix
+    ./plugins/lazygit.nix
     ./plugins/lsp.nix
+    ./plugins/lualine.nix
+    ./plugins/luasnip.nix
     ./plugins/neotree.nix
+    ./plugins/schemastore.nix
+    ./plugins/startup.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
+    ./plugins/undotree.nix
     ./plugins/whichkey.nix
   ];
 
@@ -34,6 +40,8 @@
       shiftwidth = 2;
       wildmenu = true;
       wildmode = "longest:full,full";
+      # Disable swap file creation
+      swapfile = false;
     };
 
     keymaps = [
@@ -83,6 +91,13 @@
       fugitive.enable = true;
       gitignore.enable = false;
       noice.enable = true;
+      #airline = {
+      #  enable = true;
+      #  settings = {
+      #    powerline = true;
+      #    theme = "minimalist";
+      #  };
+      #};
       #nvim-colorizer.enable = true;
     };
 

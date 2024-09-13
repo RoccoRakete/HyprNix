@@ -3,6 +3,10 @@
     enable = true;
     settings = {
       checkTs = true;
+      disable_filetype = [
+        "TelescopePrompt"
+        "vim"
+      ];
     };
   };
 }
