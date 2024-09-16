@@ -31,7 +31,7 @@
 		"memory",
 		"temperature",
 		"backlight",
-		"cpu",
+		//"cpu",
 		"battery",
 		"power-profiles-daemon",
 		"tray",

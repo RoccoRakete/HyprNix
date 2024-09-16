@@ -18,6 +18,7 @@
 
     #Game
     lutris
+    heroic-unwrapped
 
     #Office
     ungoogled-chromium
@@ -41,8 +42,11 @@
     spotify
     gthumb
     playerctl
+    celluloid
+    davinci-resolve
 
     #System
+    dig
     sway-audio-idle-inhibit
     nerdfetch
     swaynotificationcenter

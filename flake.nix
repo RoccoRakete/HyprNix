@@ -38,10 +38,10 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #nixos-cosmic = {
+    #  url = "github:lilyinstarlight/nixos-cosmic";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     eza = {
       url = "github:eza-community/eza";
@@ -59,7 +59,7 @@
       nixpkgs,
       home-manager,
       nixvim,
-      nixos-cosmic,
+      #nixos-cosmic,
       ...
     }@inputs:
     let
@@ -83,7 +83,7 @@
             }
             ./nixos/configuration.nix
             nixvim.nixosModules.nixvim
-            nixos-cosmic.nixosModules.default
+            # nixos-cosmic.nixosModules.default
           ];
         };
       };

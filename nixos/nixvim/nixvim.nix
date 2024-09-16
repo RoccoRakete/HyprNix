@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -100,6 +100,10 @@
       #};
       #nvim-colorizer.enable = true;
     };
+
+    extraPlugins = with pkgs.vimPlugins; [
+      #distant-nvim
+    ];
 
     extraConfigLua =
       ''if vim.g.neovide then''

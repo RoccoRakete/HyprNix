@@ -49,6 +49,7 @@
     fwupd.enable = true;
     gvfs.enable = true;
     upower.enable = true;
+    ollama.enable = false;
     power-profiles-daemon.enable = true;
     logind = {
       lidSwitchDocked = "ignore";
@@ -72,7 +73,15 @@
 
   # Enable the GNOME Desktop Environment.
   services.xserver = {
-    displayManager.gdm.enable = true;
+    displayManager.gdm = {
+      enable = true;
+      settings = {
+        daemon = {
+          AutomaticLoginEnable = true;
+          AutomaticLogin = "martin";
+        };
+      };
+    };
     desktopManager.gnome.enable = false;
   };
 

@@ -32,7 +32,6 @@ window#waybar {
   background: #171717;
   box-shadow: inset -2px -2px 5px 1px rgba(0, 0, 0, 0.4), 2px 2px 5px 1px rgba(0, 0, 0, 0.4) inset; }
 
-#cpu,
 #memory,
 #temperature,
 #battery,
@@ -57,21 +56,14 @@ window#waybar {
   border-bottom-left-radius: 5px; }
 
 #power-profiles-daemon,
+#backlight,
 #custom-notification,
-#cpu,
 #tray,
 #custom-updates {
   margin-right: 6px;
   padding-right: 6px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px; }
-
-#cpu {
-  font-size: 1.1em;
-  font-weight: bolder;
-  color: #ff7800;
-  transition: 400ms;
-  animation: ws_normal 20s ease-out 10; }
 
 #bluetooth.connected {
   font-size: 1.15em;
