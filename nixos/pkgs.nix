@@ -14,7 +14,9 @@
     eog
     gnome-calendar
     gnome-calculator
-    gnome-disk-utility
+    gnome-tweaks
+    gnome-extension-manager
+    gnome-power-manager
 
     #Game
     lutris
@@ -46,6 +48,10 @@
     davinci-resolve
 
     #System
+    libinput
+    htop
+    smartmontools
+    libatasmart
     dig
     sway-audio-idle-inhibit
     nerdfetch

@@ -6,7 +6,7 @@
     initrd.systemd.enable = true;
     plymouth.enable = true;
     tmp.cleanOnBoot = true;
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
     kernelParams = [
       "quiet"
       "nosgx"
@@ -45,18 +45,19 @@
   };
 
   services = {
-    blueman.enable = true;
+    #blueman.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
     upower.enable = true;
     ollama.enable = false;
+    stirling-pdf.enable = true;
     power-profiles-daemon.enable = true;
     logind = {
       lidSwitchDocked = "ignore";
-      lidSwitch = "ignore";
+      lidSwitch = "suspend";
     };
     upower = {
-      ignoreLid = true;
+      ignoreLid = false;
     };
     udev.extraRules = ''
       # DFU (Internal bootloader for STM32 and AT32 MCUs)
@@ -82,11 +83,17 @@
         };
       };
     };
-    desktopManager.gnome.enable = false;
+    desktopManager.gnome.enable = true;
   };
 
   # Enable Cosmic
   # services.desktopManager.cosmic.enable = true;
+
+  # Enable Plasma 6
+  #services.desktopManager.plasma6.enable = true;
+  #services.displayManager.sddm = {
+  #  enable = true;
+  #};
 
   programs = {
     gnome-disks.enable = true;

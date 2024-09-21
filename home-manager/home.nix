@@ -6,6 +6,7 @@
     ./envHome.nix
     ./firefox.nix
     ./git.nix
+    ./gnome.nix
     #./hyprland.nix
     ./kitty.nix
     ./pkgs.nix

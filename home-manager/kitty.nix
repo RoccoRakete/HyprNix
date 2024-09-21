@@ -3,7 +3,7 @@
   # VSCode
    programs.kitty = {
     enable = true;
-    theme = "Catppuccin-Mocha";
+    themeFile = "Catppuccin-Mocha";
     settings = {
       font_family = "Hurmit Nerd Font";
       font_size = "12.0";

@@ -4,7 +4,7 @@
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
-      tsserver.enable = true;
+      ts-ls.enable = true;
       svelte.enable = true;
       tailwindcss.enable = true;
       pyright.enable = true;
