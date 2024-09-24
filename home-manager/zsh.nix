@@ -35,7 +35,7 @@
         cdd = "cd $DOTL";
         editd = "nvim $DOTL";
 
-        add = "cdd && git add -A && cd -";
+        addd = "cdd && git add -A && cd -";
         commitd = "add && if ! git diff-index --quiet HEAD; then git commit ; fi && cd -";
         pushd = "commitd && git push --repo $DOTR && cd -";
 
