@@ -18,6 +18,9 @@
           { name = "zsh-users/zsh-syntax-highlighting"; }
         ];
       };
+      localVariables = {
+        DOTL = [ "~/.dots/nixos" ];
+      };
       initExtra = ''
         nerdfetch
         export TERM=xterm
