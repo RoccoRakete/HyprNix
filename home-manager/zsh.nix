@@ -20,6 +20,7 @@
       };
       localVariables = {
         DOTL = [ "~/.dots/nixos" ];
+        DORTL = [ "https://github.com/RoccoRakete/HyprNix.git" ];
       };
       initExtra = ''
         nerdfetch
