@@ -37,9 +37,9 @@
         update = "sudo nixos-rebuild switch";
         fwup = "sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update";
 
-        flake-update = "commitd && nix flake update ~/.dots/nixos && commitd";
-        upgrade-laptop = "commitd && nh os switch --hostname zeus /home/martin/.dots/nixos";
-        home-upgrade-laptop = "commitd && nh home switch /home/martin/.dots/nixos";
+        flake-update = "commitd & nix flake update ~/.dots/nixos & commitd";
+        upgrade-laptop = "commitd & nh os switch --hostname zeus /home/martin/.dots/nixos";
+        home-upgrade-laptop = "commitd & nh home switch /home/martin/.dots/nixos";
         news-laptop = "home-manager news --flake ~/.dots/nixos#zeus";
       };
       historySubstringSearch = {
