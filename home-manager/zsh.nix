@@ -32,7 +32,7 @@
         ll = "eza -loah --icons=always --no-permissions --git";
         v = "nvim";
 
-        cdd = "cd ~/.dots/nixos";
+        cdd = "cd $DOTL";
         editd = "nvim ~/.dots/nixos";
 
         add = "cdd && git add -A && cd -";
