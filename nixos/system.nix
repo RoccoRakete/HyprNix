@@ -6,7 +6,8 @@
     initrd.systemd.enable = true;
     plymouth.enable = true;
     tmp.cleanOnBoot = true;
-    kernelPackages = pkgs.linuxPackages;
+    kernelPackages = pkgs.linuxPackages; # LTS
+    # kernelPackages = pkgs.linuxPackages_latest; # Mainline
     kernelParams = [
       "quiet"
       "nosgx"
@@ -45,7 +46,7 @@
   };
 
   services = {
-    #blueman.enable = true;
+    blueman.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
     upower.enable = true;
@@ -54,10 +55,10 @@
     power-profiles-daemon.enable = true;
     logind = {
       lidSwitchDocked = "ignore";
-      lidSwitch = "suspend";
+      lidSwitch = "ignore";
     };
     upower = {
-      ignoreLid = false;
+      ignoreLid = true;
     };
     udev.extraRules = ''
       # DFU (Internal bootloader for STM32 and AT32 MCUs)

@@ -48,6 +48,9 @@
     davinci-resolve
 
     #System
+    acpi
+    virt-viewer
+    nmap
     libinput
     htop
     smartmontools

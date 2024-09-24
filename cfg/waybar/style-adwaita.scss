@@ -24,6 +24,7 @@ window#waybar {
 #pulseaudio,
 #custom-notification,
 #power-profiles-daemon,
+#idle_inhibitor,
 #custom-updates,
 #tray {
   padding-left: $spacing;
@@ -40,8 +41,8 @@ window#waybar {
   border-bottom-left-radius: $radii/2;
 }
 
-#power-profiles-daemon,
 #backlight,
+#idle_inhibitor,
 #custom-notification,
 #tray,
 #custom-updates {

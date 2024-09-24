@@ -30,15 +30,16 @@
 
         editd = "nvim ~/.dots/nixos";
 
-        pushd = "cd ~/.dots/nixos && git add -A && git commit && git push --repo https://github.com/RoccoRakete/HyprNix.git && cd ~";
-        add = "cd ~/.dots/nixos && git add -A && cd ~";
+        add = "cd ~/.dots/nixos && git add -A && cd -";
+        commitd="cd ~/.dots/nixos && git add -A && git commit && cd -"; 
+        pushd = "cd ~/.dots/nixos && git add -A && git commit && git push --repo https://github.com/RoccoRakete/HyprNix.git && cd -";
 
         update = "sudo nixos-rebuild switch";
-        flake-update = "nix flake update ~/.dots/nixos";
         fwup = "sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update";
 
-        upgrade-laptop = "nh os switch --hostname zeus /home/martin/.dots/nixos";
-        home-upgrade-laptop = "nh home switch /home/martin/.dots/nixos";
+        flake-update = "commitd && nix flake update ~/.dots/nixos && commitd";
+        upgrade-laptop = "commitd && nh os switch --hostname zeus /home/martin/.dots/nixos";
+        home-upgrade-laptop = "commitd && nh home switch /home/martin/.dots/nixos";
         news-laptop = "home-manager news --flake ~/.dots/nixos#zeus";
       };
       historySubstringSearch = {

@@ -12,6 +12,7 @@
       bashls.enable = true;
       jsonls.enable = true;
       yamlls.enable = true;
+      cssls.enable = true;
     };
     keymaps = {
       lspBuf = {

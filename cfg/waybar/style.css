@@ -10,6 +10,7 @@
 #tray,
 #custom-power,
 #power-profiles-daemon,
+#idle_inhibitor,
 #custom-updates {
   background-color: #353535; }
 
@@ -18,6 +19,12 @@
 
 #pulseaudio {
   color: #33d17a; }
+
+#idle_inhibitor.activated {
+  color: #e01b24; }
+
+#idle_inhibitor.deactivated {
+  color: #3584e4; }
 
 #custom-notification {
   color: #ff7800; }
@@ -41,6 +48,7 @@ window#waybar {
 #pulseaudio,
 #custom-notification,
 #power-profiles-daemon,
+#idle_inhibitor,
 #custom-updates,
 #tray {
   padding-left: 3px;
@@ -55,8 +63,8 @@ window#waybar {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px; }
 
-#power-profiles-daemon,
 #backlight,
+#idle_inhibitor,
 #custom-notification,
 #tray,
 #custom-updates {

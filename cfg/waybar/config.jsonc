@@ -34,6 +34,7 @@
 		//"cpu",
 		"battery",
 		"power-profiles-daemon",
+		"idle_inhibitor",
 		"tray",
 		//"custom/updates",
 		"network",
@@ -172,6 +173,13 @@
 			"power-saver": "<span foreground=\"#33d17a\"></span>"
 		}
 	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": "󰾫"
+		}
+	},
 	"custom/updates": {
 		"format": "<span foreground=\"#77767b\">{icon}</span>",
 		"format-alt": "<span foreground=\"#77767b\">{icon}</span> {}",
@@ -212,7 +220,7 @@
 		"format": "{icon} {format_source}",
 		"format-bluetooth": "{icon} {format_source}",
 		"format-bluetooth-muted": " {icon} {format_source}",
-		"format-muted": "󰸈 {format_source}",
+		"format-muted": " {format_source}",
 		"format-source": "<span color=\"#f6d32d\">  </span>",
 		"format-source-muted": "<span color=\"#f6d32d\">  </span>",
 		"format-icons": {
