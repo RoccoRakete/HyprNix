@@ -19,8 +19,8 @@
         ];
       };
       localVariables = {
-        DOTL = [ "~/.dots/nixos" ];
-        DORTL = [ "https://github.com/RoccoRakete/HyprNix.git" ];
+        DOTL = [ "$HOME/.dots/nixos/" ];
+        DOTR = [ "https://github.com/RoccoRakete/HyprNix.git" ];
       };
       initExtra = ''
         nerdfetch
@@ -33,11 +33,11 @@
         v = "nvim";
 
         cdd = "cd $DOTL";
-        editd = "nvim ~/.dots/nixos";
+        editd = "nvim $DOTL";
 
         add = "cdd && git add -A && cd -";
         commitd = "cdd && git add -A && if ! git diff-index --quiet HEAD; then git commit ; fi && cd -";
-        pushd = "cdd && add && commitd && git push --repo https://github.com/RoccoRakete/HyprNix.git && cd -";
+        pushd = "cdd && add && commitd && git push --repo $DOTR && cd -";
 
         update = "sudo nixos-rebuild switch";
         fwup = "sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update";
