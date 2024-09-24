@@ -35,9 +35,9 @@
         cdd = "cd $DOTL";
         editd = "nvim $DOTL";
 
-        addd = "cdd && git add -A && cd -";
-        commitd = "add && if ! git diff-index --quiet HEAD; then git commit ; fi && cd -";
-        pushd = "commitd && git push --repo $DOTR && cd -";
+        add = "cdd && git add -A && cd -";
+        commitd = "cdd && add && if ! git diff-index --quiet HEAD; then git commit ; fi && cd -";
+        pushd = "cdd && commitd && git push --repo $DOTR && cd -";
 
         update = "sudo nixos-rebuild switch";
         fwup = "sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update";
