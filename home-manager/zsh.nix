@@ -28,11 +28,12 @@
         ll = "eza -loah --icons=always --no-permissions --git";
         v = "nvim";
 
+        cdd = "cd ~/.dots/nixos";
         editd = "nvim ~/.dots/nixos";
 
-        add = "cd ~/.dots/nixos && git add -A && cd -";
-        commitd = "cd ~/.dots/nixos && git add -A && if ! git diff-index --quiet HEAD; then git commit ; fi && cd -";
-        pushd = "cd ~/.dots/nixos && git add -A && git commit && git push --repo https://github.com/RoccoRakete/HyprNix.git && cd -";
+        add = "cdd && git add -A && cd -";
+        commitd = "cdd && git add -A && if ! git diff-index --quiet HEAD; then git commit ; fi && cd -";
+        pushd = "cdd && add && commitd && git push --repo https://github.com/RoccoRakete/HyprNix.git && cd -";
 
         update = "sudo nixos-rebuild switch";
         fwup = "sudo fwupdmgr refresh --force && sudo fwupdmgr get-updates && sudo fwupdmgr update";
